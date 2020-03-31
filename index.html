@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/V Accessibility Research Project</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+      integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="text-center">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        role="navigation">
+        <a class="navbar-brand" href="#">Accessible Multimedia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" title="View a Movie" href="#movie">Watch A
+                Movie <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="View a TV Show" href="#tv">Watch A TV
+                Show</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Listen to a song" href="#audio">Listen
+                To A Song</a>
+            </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Turn Off Lights</button>
+          </form> -->
+        </div>
+      </nav>
+
+      <h1 class="invisible">Accessible Multimedia</h1>
+
+      <h2>Accessibility Controls</h2>
+      <p>Welcome! Use the controls below to customize your experience.</p>
+
+      <form class="form-inline border col-lg-6 controls justify-content-center">
+        <div class="form-group mb-2">
+          <label for="size" class="mr-2">Page Text Size</label>
+          <select onchange="textSize()" class="form-control mr-3" id="size"
+            name="size" data-toggle="tooltip" data-placement="bottom"
+            title="Change the font size for the entire page!">
+            <option value="default">Default</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x">X-Large</option>
+            <option value="xx">XX-Large</option>
+          </select>
+          <button class="btn btn-primary toggle" onclick="toggleDarkMode()"
+            data-toggle="tooltip" data-placement="bottom" title="Switch between
+            a light and dark interface!"><i class="fas fa-lightbulb"></i> Toggle
+            Dark Mode</button>
+        </div>
+      </form>
+
+
+
+      <h2 id="movie">Movie: The Avengers</h2>
+      <p>Captions are available for this video.</p>
+      <hr>
+
+      <video src="video/avengers.mp4" controls>
+        <track kind="subtitles" label="English Subtitles" srclang="en"
+          src="vtt/avengers.vtt" />
+      </video>
+
+      <h2 id="tv">TV: Stranger Things</h2>
+      <p>Captions are available for this video.</p>
+      <hr>
+
+      <video src="video/stranger-things.mp4" controls>
+        <track kind="subtitles" label="English Subtitles" srclang="en"
+          src="vtt/stranger-things.vtt" />
+      </video>
+
+      <h2 id="audio">Audio: </h2>
+      <hr>
+
+      <div class="audio">
+        
+
+        <p>Queen - Another One Bites The Dust</p>
+        <audio title="Queen - Another One Bites The Dust" controls>
+          <source src="audio/queen.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p>
+          <button class="btn btn-primary transcript" type="button" data-toggle="collapse"
+            data-target="#transcript" aria-expanded="false"
+            aria-controls="transcript">
+            View Audio Transcript
+          </button>
+        </p>
+        <div class="collapse col-lg-6" id="transcript">
+          <div class="card card-body">
+            Oh! Let's go!
+            <br>
+            <br>
+            Steve walks warily down the street
+            With the brim pulled way down low
+            Ain't no sound but the sound of his feet
+            Machine guns ready to go
+            <br>
+            <br>
+            Are you ready, hey, are you ready for this?
+            Are you hanging on the edge of your seat?
+            Out of the doorway the bullets rip
+            To the sound of the beat
+            <br>
+            <br>
+            Another one bites the dust
+            Another one bites the dust
+            And another one gone, and another one gone
+            Another one bites the dust
+            Hey, I'm gonna get you, too
+            Another one bites the dust
+            <br>
+            <br>
+            How do you think I'm gonna get along
+            Without you when you're gone?
+            You took me for everything that I had
+            And kicked me out on my own
+            <br>
+            <br>
+            Are you happy, are you satisfied?
+            How long can you stand the heat?
+            Out of the doorway the bullets rip
+            To the sound of the beat
+            <br>
+            <br>
+            Look out!
+            <br>
+            <br>
+            Another one bites the dust
+            Another one bites the dust
+            And another one gone, and another one gone
+            Another one bites the dust
+            Hey, I'm gonna get you, too
+            Another one bites the dust
+            <br>
+            <br>
+            Hey!
+            Oh, take it
+            Bite the dust
+            Bite the dust, yeah
+            <br>
+            <br>
+            Another one bites the dust
+            Another one bites the dust
+            Another one bites the dust
+            Another one bites the dust
+            <br>
+            <br>
+            Shout!
+            <br>
+            <br>
+            There are plenty of ways that you can hurt a man
+            And bring him to the ground
+            You can beat him, you can cheat him
+            You can treat him bad and leave him when he's down
+            <br>
+            <br>
+            But I'm ready, yes, I'm ready for you
+            I'm standing on my own two feet
+            Out of the doorway the bullets rip
+            Repeating to the sound of the beat
+            <br>
+            <br>
+            Another one bites the dust
+            Another one bites the dust
+            And another one gone, and another one gone
+            Another one bites the dust
+            Hey, I'm gonna get you, too
+            Another one bites the dust
+            <br>
+            <br>
+            Shoot out
+            Alright
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button onclick="backToTop()" id="top" title="Go to top">Back To Top <i
+        class="fas fa-chevron-up"></i></button>
+
+    <script src="js/main.js"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    <!-- Enable tooltips for bootstrap -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip({
+          trigger : 'hover'
+        });
+      });
+    </script>
+  </body>
+</html>
