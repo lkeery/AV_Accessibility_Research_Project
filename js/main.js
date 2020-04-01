@@ -4,8 +4,8 @@ let modeToggle = document.querySelector('.toggle');
 let state = "ON";
 
 function toggleDarkMode() {
-    let page = document.body;
-    page.classList.toggle("dark-mode");
+    let pageStyle = document.body;
+    pageStyle.classList.toggle("dark-mode");
 }
 
 function changeText() {
