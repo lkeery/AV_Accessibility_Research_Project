@@ -66,7 +66,7 @@
             <option value="x">X-Large</option>
             <option value="xx">XX-Large</option>
           </select>
-          <button class="btn btn-primary toggle" onclick="toggleDarkMode()"
+          <button class="btn btn-primary toggle" type="button" onclick="toggleDarkMode()"
             data-toggle="tooltip" data-placement="bottom" title="Switch between
             a light and dark interface!"><i class="fas fa-lightbulb"></i> Toggle
             Dark Mode</button>
@@ -80,6 +80,7 @@
       <hr>
 
       <video src="video/avengers.mp4" controls>
+        <source type="video/webm" src="videos/avengers.webm"/>
         <track kind="subtitles" label="English Subtitles" srclang="en"
           src="vtt/avengers.vtt" />
       </video>
@@ -89,6 +90,7 @@
       <hr>
 
       <video src="video/stranger-things.mp4" controls>
+        <source type="video/webm" src="videos/stranger-things.webm"/>
         <track kind="subtitles" label="English Subtitles" srclang="en"
           src="vtt/stranger-things.vtt" />
       </video>
